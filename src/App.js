@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./index.css"
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="header">
+        <h1>React Card Component</h1>
+      </div>
+      <div className="cards">
+        <Card />
+      </div>
     </div>
   );
 }
-
-export default App;
+const Card = () => {
+  return (
+    <div className="card">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/330px-Image_created_with_a_mobile_phone.png"
+        alt="img"
+      />
+      <div className="card-body">
+        <h2>Title of the Card</h2>
+        <p>Caption text about the Card</p>
+        <h5>Author name</h5>
+      </div>
+    </div>
+  );
+};
